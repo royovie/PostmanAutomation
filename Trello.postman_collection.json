@@ -1,0 +1,182 @@
+{
+	"info": {
+		"_postman_id": "2a0f0a8a-e6e5-4f57-ba94-2365b89e1dc5",
+		"name": "Trello",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20924714"
+	},
+	"item": [
+		{
+			"name": "ceate a board",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"name\": \"Quale\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.trello.com/1/boards/?key=c825b7928774df3da1e08be4fbf3ec58&token=29253dd5292894369deadf0a556b7bfa9d223cd8732fbf404e45456be22c4882",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"boards",
+						""
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Quale",
+							"disabled": true
+						},
+						{
+							"key": "key",
+							"value": "c825b7928774df3da1e08be4fbf3ec58"
+						},
+						{
+							"key": "token",
+							"value": "29253dd5292894369deadf0a556b7bfa9d223cd8732fbf404e45456be22c4882"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get a board",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}{{ID}}?key={{key}}&token={{token}}",
+					"host": [
+						"{{baseurl}}{{ID}}"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{key}}"
+						},
+						{
+							"key": "token",
+							"value": "{{token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete a board",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/boards/629b405f3b664c2119a79ea8?key=c825b7928774df3da1e08be4fbf3ec58&token=29253dd5292894369deadf0a556b7bfa9d223cd8732fbf404e45456be22c4882",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"boards",
+						"629b405f3b664c2119a79ea8"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "c825b7928774df3da1e08be4fbf3ec58"
+						},
+						{
+							"key": "token",
+							"value": "29253dd5292894369deadf0a556b7bfa9d223cd8732fbf404e45456be22c4882"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update a board",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"name\": \"Roysboard\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.trello.com/1/boards/629c86f6a3be973cc7a05f3d?key=c825b7928774df3da1e08be4fbf3ec58&token=29253dd5292894369deadf0a556b7bfa9d223cd8732fbf404e45456be22c4882",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"boards",
+						"629c86f6a3be973cc7a05f3d"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "c825b7928774df3da1e08be4fbf3ec58"
+						},
+						{
+							"key": "token",
+							"value": "29253dd5292894369deadf0a556b7bfa9d223cd8732fbf404e45456be22c4882"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "baseurl",
+			"value": "https://api.trello.com/1/boards/"
+		},
+		{
+			"key": "ID",
+			"value": "629c86f6a3be973cc7a05f3d"
+		},
+		{
+			"key": "key",
+			"value": "c825b7928774df3da1e08be4fbf3ec58"
+		},
+		{
+			"key": "token",
+			"value": "29253dd5292894369deadf0a556b7bfa9d223cd8732fbf404e45456be22c4882"
+		}
+	]
+}
